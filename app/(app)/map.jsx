@@ -1,9 +1,6 @@
 import { useState } from "react";
-import axios from "axios";
-import Constants from "expo-constants";
 import { useRouter } from "expo-router";
 import { KeyboardAwareScrollView } from "react-native-keyboard-aware-scroll-view";
-import FontAwesome from "@expo/vector-icons/FontAwesome";
 import {
   SafeAreaView,
   Platform,
@@ -15,7 +12,10 @@ import {
   ActivityIndicator,
 } from "react-native";
 
-import { Logo, colors, styles } from "../../assets/components/index";
+import { Logo } from "../../assets/components/index";
+
+import colors from "../../assets/styles/colors";
+import styles from "../../assets/styles/style";
 
 export default function Map() {
   const [errorMessage, setErrorMessage] = useState(null);
@@ -24,7 +24,8 @@ export default function Map() {
   const router = useRouter();
 
   return (
-    <SafeAreaView style={{ flex: 1, backgroundColor: colors.background }}>
+    // <SafeAreaView style={{ flex: 1, backgroundColor: colors.background }}>
+    <SafeAreaView>
       <Text> page map</Text>
     </SafeAreaView>
   );

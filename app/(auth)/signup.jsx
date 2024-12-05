@@ -14,7 +14,9 @@ import {
   Alert,
 } from "react-native";
 
-import { Logo, colors, styles } from "../../assets/components/index";
+import { Logo, Title } from "../../assets/components/index";
+import colors from "../../assets/styles/colors";
+import styles from "../../assets/styles/style";
 
 import { AuthContext } from "../../context/AuthContext";
 
@@ -83,7 +85,6 @@ export default function Login() {
         contentContainerStyle={[styles.container]}
         style={{
           marginTop: Platform.OS === "android" ? Constants.statusBarHeight : 0,
-          // gap: 20,
           flex: 1,
         }}
         // alwaysBounceVertical={false}
@@ -93,7 +94,7 @@ export default function Login() {
       >
         <View>
           <Logo />
-          <Text style={[styles.title]}>Sign up</Text>
+          <Title title="Sign up" />
         </View>
         <View>
           <TextInput

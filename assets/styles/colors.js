@@ -5,4 +5,6 @@ export default {
   titleGrey: "#717171",
   textGrey: "#767676",
   redBtn: "#F96166",
+  fullStarzColor: "#FFB000",
+  emptyStarzColor: "#BBBBBB",
 };

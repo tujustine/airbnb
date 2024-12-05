@@ -9,13 +9,6 @@ const styles = StyleSheet.create({
     backgroundColor: colors.background,
   },
   logo: { height: 100, width: 100, marginTop: 20 },
-  // title: {
-  //   fontSize: 24,
-  //   fontWeight: "bold",
-  //   textAlign: "center",
-  //   color: colors.titleGrey,
-  //   marginVertical: 15,
-  // },
   oneLineInput: {
     borderBottomWidth: 2,
     borderBottomColor: colors.salmon,
@@ -24,7 +17,7 @@ const styles = StyleSheet.create({
     width: 320,
   },
   textAreaInput: {
-    borderWidth: 1,
+    borderWidth: 2,
     borderColor: colors.salmon,
     height: 100,
     width: 320,

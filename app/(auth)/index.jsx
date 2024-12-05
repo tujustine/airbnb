@@ -71,7 +71,6 @@ export default function Login() {
         contentContainerStyle={[styles.container]}
         style={{
           marginTop: Platform.OS === "android" ? Constants.statusBarHeight : 0,
-          // gap: 20,
           flex: 1,
         }}
         // alwaysBounceVertical={false}
@@ -81,7 +80,6 @@ export default function Login() {
       >
         <View>
           <Logo />
-          {/* <Text style={[styles.title]}>Sign in</Text> */}
           <Title title={"Sign In"} />
         </View>
         <View>

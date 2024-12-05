@@ -1,7 +1,6 @@
 import { useState, useContext } from "react";
 import { useRouter } from "expo-router";
 import { KeyboardAwareScrollView } from "react-native-keyboard-aware-scroll-view";
-import FontAwesome from "@expo/vector-icons/FontAwesome";
 import {
   SafeAreaView,
   Platform,
@@ -13,7 +12,10 @@ import {
   ActivityIndicator,
 } from "react-native";
 
-import { Logo, colors, styles } from "../../assets/components/index";
+import { Logo } from "../../assets/components/index";
+
+import colors from "../../assets/styles/colors";
+import styles from "../../assets/styles/style";
 
 import { AuthContext } from "../../context/AuthContext";
 
@@ -26,7 +28,8 @@ export default function Profile() {
   const router = useRouter();
 
   return (
-    <SafeAreaView style={{ flex: 1, backgroundColor: colors.background }}>
+    // <SafeAreaView style={{ flex: 1, backgroundColor: colors.background }}>
+    <SafeAreaView>
       <Text> page profile</Text>
       <TouchableOpacity onPress={logout}>
         <Text style={styles.btnText}>Logout</Text>
