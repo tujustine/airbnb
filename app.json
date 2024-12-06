@@ -2,7 +2,7 @@
   "expo": {
     "name": "airbnb",
     "slug": "airbnb",
-    "scheme": "myapp",
+    "scheme": "airbnb",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",

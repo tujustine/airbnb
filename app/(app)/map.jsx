@@ -19,7 +19,7 @@ import styles from "../../assets/styles/style";
 
 export default function Map() {
   const [errorMessage, setErrorMessage] = useState(null);
-  const [isLoading, setIsLoading] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
 
   const router = useRouter();
 

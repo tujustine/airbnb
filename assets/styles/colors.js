@@ -7,4 +7,6 @@ export default {
   redBtn: "#F96166",
   fullStarzColor: "#FFB000",
   emptyStarzColor: "#BBBBBB",
+  lightGray: "#E7E7E7",
+  airBnbColor: "#F9575C",
 };

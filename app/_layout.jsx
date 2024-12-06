@@ -7,6 +7,8 @@ export default function RootLayout() {
   const [userID, setUserID] = useState(null);
   const [userToken, setUserToken] = useState(null);
 
+  // on fait 2 useEffect car on ne veut pas que la partie asyncStorage
+  // se render à chaque fois que userID ou userToken change
   useEffect(() => {
     const fetchData = async () => {
       setUserID(await AsyncStorage.getItem("id"));
@@ -14,7 +16,9 @@ export default function RootLayout() {
     };
 
     fetchData();
+  }, []);
 
+  useEffect(() => {
     if (userID && userToken) {
       router.replace("/home");
     } else {
@@ -25,15 +29,25 @@ export default function RootLayout() {
   const login = async (userID, userToken) => {
     setUserID(userID);
     setUserToken(userToken);
-    await AsyncStorage.setItem("id", userID);
-    await AsyncStorage.setItem("token", userToken);
-    console.log(await AsyncStorage.getItem("id"));
+
+    try {
+      await AsyncStorage.setItem("id", userID);
+      await AsyncStorage.setItem("token", userToken);
+      console.log(await AsyncStorage.getItem("id"));
+    } catch (error) {
+      console.log(error);
+    }
   };
   const logout = async () => {
     setUserID(null);
     setUserToken(null);
-    await AsyncStorage.removeItem("id");
-    await AsyncStorage.removeItem("token");
+
+    try {
+      await AsyncStorage.removeItem("id");
+      await AsyncStorage.removeItem("token");
+    } catch (error) {
+      console.log(error);
+    }
   };
 
   return (

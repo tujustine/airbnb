@@ -5,5 +5,6 @@ import { Title } from "./Title";
 // import { CustomButton } from "./CustomButton";
 // import { LargeInput } from "./LargeInput";
 // import { RedirectButton } from "./RedirectButton";
+import Offer from "./Offer";
 
-export { Logo, Title };
+export { Logo, Title, Offer };

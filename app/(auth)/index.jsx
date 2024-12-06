@@ -79,7 +79,7 @@ export default function Login() {
         // showsVerticalScrollIndicator={false}
       >
         <View>
-          <Logo />
+          <Logo style={styles.logoAuthPage} />
           <Title title={"Sign In"} />
         </View>
         <View>
@@ -129,6 +129,7 @@ export default function Login() {
           {errorMessage && (
             <Text style={styles.errorMessage}>{errorMessage}</Text>
           )}
+
           {isLoading ? (
             <ActivityIndicator size="large" color="black" />
           ) : (

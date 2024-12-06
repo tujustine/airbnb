@@ -93,7 +93,7 @@ export default function Login() {
         // showsVerticalScrollIndicator={false}
       >
         <View>
-          <Logo />
+          <Logo style={styles.logoAuthPage} />
           <Title title="Sign up" />
         </View>
         <View>

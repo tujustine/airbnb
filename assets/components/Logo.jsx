@@ -1,14 +1,14 @@
 import { Image } from "react-native";
 
-import styles from "../styles/style";
+// import styles from "../styles/style";
 
-export function Logo() {
+export function Logo({ style }) {
   return (
     <Image
       source={{
         uri: "https://img.icons8.com/?size=512&id=103424&format=png",
       }}
-      style={styles.logo}
+      style={style}
       resizeMode="contain"
     />
   );

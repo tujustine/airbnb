@@ -1,5 +1,6 @@
 import { StyleSheet } from "react-native";
 import colors from "./colors";
+import { Platform } from "react-native";
 
 const styles = StyleSheet.create({
   container: {
@@ -7,8 +8,23 @@ const styles = StyleSheet.create({
     justifyContent: "space-around",
     alignItems: "center",
     backgroundColor: colors.background,
+    marginTop: Platform.OS === "android" ? Constants.statusBarHeight : 0,
   },
-  logo: { height: 100, width: 100, marginTop: 20 },
+
+  logoAuthPage: { height: 100, width: 100, marginTop: 20 },
+  logoPageHeader: {
+    width: 40,
+    height: 40,
+    alignSelf: "center",
+    marginTop: 20,
+    marginBottom: 10,
+  },
+  logoContainer: {
+    borderBottomWidth: 1,
+    borderBottomColor: colors.lightGray,
+    // width: "100%",
+    // marginBottom: 10,
+  },
   oneLineInput: {
     borderBottomWidth: 2,
     borderBottomColor: colors.salmon,

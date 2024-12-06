@@ -21,7 +21,7 @@ import { AuthContext } from "../../context/AuthContext";
 
 export default function Profile() {
   const [errorMessage, setErrorMessage] = useState(null);
-  const [isLoading, setIsLoading] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
 
   const { logout } = useContext(AuthContext);
 
